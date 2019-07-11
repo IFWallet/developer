@@ -6,28 +6,17 @@
 
 ## Auth Limit
 
-Before you go on, Please first apply an API Key to use in the API requests.
+Before you go on, Please let me know.
 
-To Apply: mail to `admin@ifwallet.com`
+mail to `admin@ifwallet.com`
 
 Tell us about:
 
 * Who you are \(Personal or Organization\)
 * What project you use API to do
 * API call times require
-* Your API Key \(e.g a bitcoin address\)
 
-We will make a decision after view your email and a survey, give you a response email. If you are permitted, we will offer you an **API Key feedback email**. Please keep API Key by yourself and only use in your own project.
-
-All APIs has request limitation, If we found that some API Key is abusing the resource, we will suspend it quickly.
-
-### How to use API Key
-
-After getting the API Key, you should pass it in the request header every time as follow format:
-
-```text
-KEY     1LFfrDM27KXeUn1xH9NTknWHexTxqiEcnF // replace it by you own bitcoin address
-```
+All APIs has request limitation, If we found that someone is abusing the resource, we will suspend it quickly.
 
 ## API URL
 
@@ -47,14 +36,16 @@ https://ltcapi.ifwallet.com:8224    // LTC
 Query recently block list order by height descending.
 
 ```text
-GET {{url}}/api/block/list/?page=1
+GET {{url}}/api/block/list/?page=1&limit=50
 ```
 
 #### params:
 
-**page**  _**integer**_  the page index, must greater than 1, e.g 5
+**page**  _**integer**_  The page index, must greater than 1, e.g 5
 
-page cap is limit to 50
+**limit** _**Integer**_  Page cap limit, e.g 50
+
+page cap is limit to 100 as default.
 
 #### Response:
 
@@ -118,7 +109,7 @@ GET {{url}}/api/block/{{block_hash}}/
 
 #### Params:
 
-**block\_hash** _**String**_  hash of a block
+**block\_hash** _**String**_  Hash of a block
 
 #### Response:
 
@@ -221,7 +212,7 @@ GET {{url}}/api/address/utxo/list/
 
 Params data must pass by an \`Application/json\` way instead of params in query string.
 
-**addresses** _**List&lt;String&gt;**_ **** a List of address
+**addresses** _**List&lt;String&gt;**_ **** A List of address
 
 **confirmations** _**Integer**_  Require confirmations
 
@@ -298,7 +289,7 @@ GET {{url}}/api/address/{{address}}/
 Query Addresses Transactions, which will return all records of appointed addresses.
 
 ```text
-GET {{url}}/api/tx/of/address/?page=1
+GET {{url}}/api/tx/of/address/?page=1&limit=50
 ```
 
 #### Params:
@@ -307,7 +298,9 @@ Params are pass by query string.
 
 **page** _**Integer**_ **** The page num e.g 1
 
-page cap limit to 50 as default
+**limit** _**Integer**_  Page cap limit e.g 50
+
+page cap limit to 100 as max
 
 #### Params Data:
 
