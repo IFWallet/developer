@@ -4,6 +4,31 @@
 
 [ifblock.io](https://ifblock.io) is an Explorer for BTC, BCH, BSV, and LTC blockchains, Which is build for wallets and DApp developers. These document help using IFBlock APIs to query Blocks, Transactions and UTXO \(Unspent Transaction Out\) of above coins.
 
+## Auth Limit
+
+Before you go on, Please first apply an API Key to use in the API requests.
+
+To Apply: mail to `admin@ifwallet.com`
+
+Tell us about:
+
+* Who you are \(Personal or Organization\)
+* What project you use API to do
+* API call times require
+* Your API Key \(e.g a bitcoin address\)
+
+We will make a decision after view your email and a survey, give you a response email. If you are permitted, we will offer you an **API Key feedback email**. Please keep API Key by yourself and only use in your own project.
+
+All APIs has request limitation, If we found that some API Key is abusing the resource, we will suspend it quickly.
+
+### How to use API Key
+
+After getting the API Key, you should pass it in the request header every time as follow format:
+
+```text
+KEY     1LFfrDM27KXeUn1xH9NTknWHexTxqiEcnF // replace it by you own bitcoin address
+```
+
 ## API URL
 
 The IFBlock API base URL \(refer as `{{ url }}` \) is defined as follows, every API request should starts with base URL.
