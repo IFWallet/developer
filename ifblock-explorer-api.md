@@ -27,6 +27,7 @@ https://bsvapi.ifwallet.com:8221    // BSV
 https://bchapi.ifwallet.com:8222    // BCH
 https://btcapi.ifwallet.com:8223    // BTC
 https://ltcapi.ifwallet.com:8224    // LTC
+https://fchapi.ifwallet.com:8225    // FCH
 ```
 
 ## Block
