@@ -414,3 +414,29 @@ Params data must pass by an \`Application/json\` way instead of params in query 
 }
 ```
 
+### Send Transaction
+
+Broadcast transaction to blockchain.
+
+```text
+POST {{url}}/api/tool/tx/broadcast/
+```
+
+#### Params Data:
+
+Params data must pass by an \`Application/json\` way instead of params in query string.
+
+**raw\_tx** _**String**_  The transaction raw hex string
+
+#### Response:
+
+```text
+{
+    "code": 0,
+    "data": {
+        "txid": "xxxxxx"
+    },
+    "message": "OK"
+}
+```
+
